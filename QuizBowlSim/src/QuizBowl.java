@@ -29,13 +29,23 @@ public class QuizBowl {
 	 */
 	private boolean gameEnded = false;
 	
-	public QuizBowl(Player[] p, int numQ, )
 	/**
 	 * @throws IOException 
 	 * 
 	 */
 	public void startGame() throws IOException {
 		Scanner input = new Scanner(System.in);
+		System.out.print("Hi there and welcome to the Quiz Bowl Simulator. Please enter the number of people playing this round (1-4)");
+		int numOfP = input.nextInt();
+		Player[] hold = new Player[numOfP];
+		for (int i = 0; i < numOfP; i++) {
+			System.out.println("Please enter Player" + (i+1) + "'s name:");
+			String s = input.next();
+			hold[i] = new Player(s);
+		}
+		numOfPlayers = hold;
+		System.out.print("How many questions for this round (5,10,15)?");
+		numOfQuestions = input.nextInt();
 		String tempS = "";
 		String line = null;
 		FileReader filereader = new FileReader("quizbowlquestions.txt");
@@ -51,7 +61,7 @@ public class QuizBowl {
 		}
 		questions = new ArrayList<String>(question_Ans.keySet());
 	}
-	public void displayQuestion() {
+	public void displayQuestion() throws InterruptedException {
 		Thread t = new Thread();
 		Scanner input = new Scanner(System.in);
 		int index = (int)(Math.random() * 50);
@@ -71,5 +81,8 @@ public class QuizBowl {
 		for (int i = 0; i < numOfPlayers.length; i++) {
 			System.out.println(numOfPlayers[i]);
 		}
+	}
+	public int getNumQ() {
+		return numOfQuestions;
 	}
 }
