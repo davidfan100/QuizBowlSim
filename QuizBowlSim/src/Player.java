@@ -20,7 +20,7 @@ public class Player {
 	 * @param n name
 	 */
 	public Player(String n) {
-		name = n;
+		name = n.substring(0,1).toUpperCase() + n.substring(1);
 		score = 0;
 	}
 	/**
@@ -35,6 +35,12 @@ public class Player {
 	 */
 	public int getScore() {
 		return score;
+	}
+	/**
+	 * get Player's name
+	 */
+	public String getName() {
+		return name;
 	}
 	/**
 	 * Display Player's name and score

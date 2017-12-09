@@ -1,3 +1,4 @@
+import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -11,26 +12,22 @@ import java.util.Scanner;
 
 public class QuizBowl {
 	/**
-	 * 
+	 * Number of Players in the round.
 	 */
 	private Player[] numOfPlayers;
 	/**
-	 * 
+	 * Number of Questions in the Round
 	 */
 	private int numOfQuestions;
 	/**
-	 * 
+	 * A Map of Questions and Answers
 	 */
 	private HashMap<String,String> question_Ans = new HashMap<String,String>();
 	/**
-	 * 
+	 * A List of all the questions
 	 */
 	private List<String> questions;
-	/**
-	 * 
-	 */
-	private boolean gameEnded = false;
-	
+
 	/**
 	 * @throws IOException 
 	 * 
@@ -69,19 +66,33 @@ public class QuizBowl {
 			}
 		}
 		questions = new ArrayList<String>(question_Ans.keySet());
-		System.out.println(question_Ans);
 	}
-	public void displayQuestion() throws InterruptedException {
+	/**
+	 * 
+	 * @throws InterruptedException
+	 * @throws IOException
+	 */
+	public void displayQuestion() throws InterruptedException, IOException {
 		Thread t = new Thread();
-		Scanner input = new Scanner(System.in);
+		int timeLimit = 75;
+		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+		Scanner input_Answer = new Scanner(System.in);
 		for (int i = 0; i < numOfPlayers.length; i++) {
 			int index = (int)(Math.random() * 50);
 			String question = questions.get(index);
 			for(int j = 0; j < question.length(); j++) {
 				System.out.print(question.charAt(j));
-				t.sleep(75);
+				long startTime = System.currentTimeMillis();
+				while ((System.currentTimeMillis() - startTime) < timeLimit
+				        && !input.ready()) {
+				}
+
+				if (input.ready()) {
+				    break;
+				} 
 			}
-			String answer = input.nextLine().toLowerCase();
+			System.out.println();
+			String answer = input_Answer.next();
 			if (question_Ans.get(questions.get(index)).indexOf(answer) >= 0) {
 				numOfPlayers[i].changeScore(10);
 				System.out.println("correct!");
@@ -91,11 +102,33 @@ public class QuizBowl {
 			}
 		}
 	}
+	/**
+	 * 
+	 */
 	public void endGame() {
+		ArrayList<String> winners = new ArrayList<String>();
+		int maxScore = numOfPlayers[0].getScore();
 		for (int i = 0; i < numOfPlayers.length; i++) {
 			System.out.println(numOfPlayers[i]);
+			if (numOfPlayers[i].getScore() >= maxScore){
+				maxScore = numOfPlayers[i].getScore();
+				winners.add(numOfPlayers[i].getName());
+			}
+		}
+		if (winners.size() == 1) {
+			System.out.println("The winner is " + winners.get(0) + "!");
+		} else {
+			System.out.println("We have a tie between ");
+			for (int i = 0; i < winners.size()-1; i++) {
+				System.out.print(winners.get(i) + " and ");
+			}
+			System.out.println(winners.get(winners.size()-1) + "!");
 		}
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public int getNumQ() {
 		return numOfQuestions;
 	}
