@@ -78,6 +78,9 @@ public class QuizBowl {
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 		Scanner input_Answer = new Scanner(System.in);
 		for (int i = 0; i < numOfPlayers.length; i++) {
+			if (numOfPlayers.length > 1) {
+				System.out.println(numOfPlayers[i].getName() +"'s Question");
+			}
 			int index = (int)(Math.random() * 50);
 			String question = questions.get(index);
 			for(int j = 0; j < question.length(); j++) {
@@ -118,7 +121,7 @@ public class QuizBowl {
 		if (winners.size() == 1) {
 			System.out.println("The winner is " + winners.get(0) + "!");
 		} else {
-			System.out.println("We have a tie between ");
+			System.out.print("We have a tie between ");
 			for (int i = 0; i < winners.size()-1; i++) {
 				System.out.print(winners.get(i) + " and ");
 			}
