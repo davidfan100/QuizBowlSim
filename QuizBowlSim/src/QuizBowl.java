@@ -130,7 +130,7 @@ public class QuizBowl {
 				maxScore = numOfPlayers[i].getScore();
 				winners.add(numOfPlayers[i].getName());
 			}
-			if (numOfPlayers[i].getScore() == maxScore) {
+			else if (numOfPlayers[i].getScore() == maxScore) {
 				winners.add(numOfPlayers[i].getName());
 			}
 		}
