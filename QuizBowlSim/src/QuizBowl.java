@@ -107,14 +107,7 @@ public class QuizBowl {
 			}
 			
 			System.out.println();
-			String answer = "";
-			long startTime = System.currentTimeMillis();
-			while ((System.currentTimeMillis() - startTime) < 5000
-			        && !input.ready()) {
-			}
-			if (input.ready()) {
-			    answer = input.readLine().toLowerCase();
-			} 
+			String answer = input_Answer.next().toLowerCase();
 			if (!answer.equals("") && question_Ans.get(questions.get(index)).indexOf(answer) >= 0) {
 				numOfPlayers[i].changeScore(10);
 				System.out.println("correct!");
