@@ -31,7 +31,7 @@ public class QuizBowl {
 
 	/**
 	 * @throws IOException 
-	 * Start the Quiz Bowl Game
+	 * Starts the Quiz Bowl Game
 	 */
 	public void startGame() throws IOException{
 		Scanner input = new Scanner(System.in);
@@ -84,8 +84,7 @@ public class QuizBowl {
 	 * Used to display the question to the player
 	 */
 	public void displayQuestion() throws InterruptedException, IOException {
-		Thread t = new Thread();
-		int timeLimit = 75;
+		int timeLimit = 40;
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 		Scanner input_Answer = new Scanner(System.in);
 		
@@ -106,9 +105,17 @@ public class QuizBowl {
 				    break;
 				} 
 			}
+			
 			System.out.println();
-			String answer = input_Answer.next().toLowerCase();
-			if (question_Ans.get(questions.get(index)).indexOf(answer) >= 0) {
+			String answer = "";
+			long startTime = System.currentTimeMillis();
+			while ((System.currentTimeMillis() - startTime) < 5000
+			        && !input.ready()) {
+			}
+			if (input.ready()) {
+			    answer = input.readLine().toLowerCase();
+			} 
+			if (!answer.equals("") && question_Ans.get(questions.get(index)).indexOf(answer) >= 0) {
 				numOfPlayers[i].changeScore(10);
 				System.out.println("correct!");
 			} else {
@@ -125,8 +132,12 @@ public class QuizBowl {
 		int maxScore = numOfPlayers[0].getScore();
 		for (int i = 0; i < numOfPlayers.length; i++) {
 			System.out.println(numOfPlayers[i]);
-			if (numOfPlayers[i].getScore() >= maxScore){
+			if (numOfPlayers[i].getScore() > maxScore){
+				winners.remove(0);
 				maxScore = numOfPlayers[i].getScore();
+				winners.add(numOfPlayers[i].getName());
+			}
+			if (numOfPlayers[i].getScore() == maxScore) {
 				winners.add(numOfPlayers[i].getName());
 			}
 		}
