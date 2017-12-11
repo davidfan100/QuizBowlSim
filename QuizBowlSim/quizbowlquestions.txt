@@ -7,7 +7,7 @@ coast includes the cities of Gulfport and Biloxi, and its western border is home
 and Vicksburg. Louisiana and Alabama border—for 10 points—what state whose capital is Jackson?
 *mississippi
 This man defeated Vercingetorix at the Battle of Alesia ,after which he wrote
-Commentaries on the Gallic Wars. He defeated Pompey at the Battle of Pharsalus ,a year
+Commentaries on the Gallic Wars. He defeated Pompey at the Battle of Pharsalus, a year
 after his army crossed the Rubicon River. For 10 points—name this Roman dictator who was
 assassinated on the Ides of March.
 *julius caesar
@@ -40,7 +40,7 @@ eaten by sharks. For 10 points—name this author of The Old Man and the Sea.
 One of these creatures is stolen from Judd Travers in a novel by Phyllis Naylor. One of these animals that
 has a clock in his belly is named Tock and befriends Milo in The Phantom Tollbooth. Shiloh 
 is—for 10 points—what type of animal that includes Clifford, who is a big, red one?
-*dog
+*dogs
 When preceded by “abstract,” this word means a branch of mathematics concerned with rings, fields, and
 groups. The adjective form of this word refers to numbers that are the roots of polynomials with integer
 coefficients and are not transcendental. Every nth‐degree polynomial has n complex roots according to the
@@ -130,7 +130,7 @@ prototypical ones exert a ”perceptual magnet effect.” A “Cardinal” syste
 by Daniel Jones, began the practice of charting them at spots on an upside‐down trapezoid. The Tiberian
 niqqud represents these things. In English, a strict tense‐lax distinction and ”Canadian raising”
 are two phenomena affecting—for 10 points—what sounds made using an open vocal tract?
-*vowels
+*vowels or vowel
 This phenomenon can be accompanied by a form of waves driven by van der Waals forces known as
 ”third sound.” The element in which it was discovered forms a ”Rollin film” of thickness 30 nanometers
 that allows it to escape any open container. Many, but not all, Bose-Einstein condensates display this
@@ -244,7 +244,7 @@ nicknamed for his owl-eyed spectacles. A cheating golf champion named Jordan Bak
 which occur in a mansion that lies across the bay from a green dock light in West Egg. For 10 points,
 name these events attended by Nick Carraway and hosted by the title character of F. Scott Fitzgerald's
 The Great Gatsby.
-*parties
+*parties or party
 This city's name became the nickname of a series of quartets by Georg Philipp
 Telemann because those quartets became popular here. A treatise that claimed to have
 found the "fundamental bass" of Western music, the Treatise on Harmony, was
@@ -284,7 +284,7 @@ directed acyclic graphs. Georgy Adelson-Velsky and Evgenii Landis developed the 
 to one of them. Two "children" can be found at the bottom of every level in the "complete binary" type
 of these structures. For 10 points, name these data structures which begin with a root node, and
 whose lowest level nodes are called leaves. 
-*tree
+*trees
 Diogenes Laertius states that this man abdicated the kingship in favor of his brother,
 and that he convinced the tyrant Melanka to abdicate. This thinker, whose thought is
 preserved in approximately 100 "fragments," stated "strife is justice" and "the way up
@@ -381,4 +381,19 @@ nicknamed “The Coathanger.” Bondi Beach is a popular tourist attraction in t
 north of Botany Bay, where James Cook landed in 1770. Its skyline includes the Harbour Bridge as well as
 Jørn Utzonʹs shell‐shaped Opera House. For 10 points—name this most populous city in Australia.
 *sydney
-
+This man is the current namesake of a Berlin boulevard on which demonstrating workers were massacred
+in 1953. This author claimed that history "repeats first as tragedy, then as farce" in describing the rise of
+Louis Napoleon. He popularized the term "commodity fetishism" and teamed with the author of The
+Condition of the Working Class in England to write "Workers of the world, unite!" For 10 points, name this
+co-author with Fredrick Engels of "The Communist Manifesto."
+*karl heinrich marx
+A program involving people from this country was opposed by the Fund for the Republic and Ernesto
+Galarza, who wrote the report "Strangers in Our Fields." After the Sleepy Lagoon murder, people with
+ancestry from this country were attacked in 1943 in Los Angeles for wearing zoot suits. For 10 points,
+name this country that sent workers north through the Bracero program to the United States.
+*mexico
+This composer was inspired to write one of his pieces by a speech given by Henry Wallace. In another of
+his compositions, daily activity around a newly built farmhouse is symbolized by the Shaker melody
+"Simple Gifts." During the 1940s, he composed the patriotic pieces A Lincoln Portrait and Fanfare for the
+Common Man. For 10 points, name this American composer of the ballets Rodeo and Appalachian Spring.
+*Aaron Copland
