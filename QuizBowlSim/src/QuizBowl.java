@@ -31,7 +31,7 @@ public class QuizBowl {
 
 	/**
 	 * @throws IOException 
-	 * Start the Quiz Bowl Game
+	 * Starts the Quiz Bowl Game
 	 */
 	public void startGame() throws IOException{
 		Scanner input = new Scanner(System.in);
