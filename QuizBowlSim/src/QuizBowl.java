@@ -87,7 +87,6 @@ public class QuizBowl {
 		int timeLimit = 40;
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 		Scanner input_Answer = new Scanner(System.in);
-		String answer = "";
 		
 		for (int i = 0; i < numOfPlayers.length; i++) {
 			if (numOfPlayers.length > 1) {
@@ -106,12 +105,9 @@ public class QuizBowl {
 				    break;
 				} 
 			}
+			
 			System.out.println();
-<<<<<<< HEAD
 			String answer = input_Answer.next().toLowerCase();
-=======
-			answer = input_Answer.next().toLowerCase();
->>>>>>> refs/heads/master
 			if (!answer.equals("") && question_Ans.get(questions.get(index)).indexOf(answer) >= 0) {
 				numOfPlayers[i].changeScore(10);
 				System.out.println("correct!");
