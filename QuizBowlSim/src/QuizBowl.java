@@ -87,7 +87,6 @@ public class QuizBowl {
 		int timeLimit = 40;
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 		Scanner input_Answer = new Scanner(System.in);
-		boolean question_read = true; 
 		String answer = "";
 		
 		for (int i = 0; i < numOfPlayers.length; i++) {
@@ -104,7 +103,6 @@ public class QuizBowl {
 				}
 
 				if (input.ready()) {
-					question_read = false;
 				    break;
 				} 
 			}
